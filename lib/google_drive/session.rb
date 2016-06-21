@@ -5,7 +5,7 @@ require 'cgi'
 require 'stringio'
 
 require 'rubygems'
-require 'nokogiri'
+require 'ox'
 require 'oauth'
 require 'oauth2'
 require 'googleauth'
@@ -414,7 +414,7 @@ module GoogleDrive
     def convert_response(response, response_type)
       case response_type
       when :xml
-        return Nokogiri.XML(response.body)
+        return Ox.dump(response.body)
       when :raw
         return response.body
       when :response

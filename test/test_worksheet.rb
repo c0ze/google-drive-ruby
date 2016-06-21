@@ -23,7 +23,7 @@ class TestWorksheet < Test::Unit::TestCase
   end
 
   def worksheet_feed_entry
-    @worksheet_feed_entry ||= Nokogiri.XML(<<-XML
+    @worksheet_feed_entry ||= Ox.parse(<<-XML
     <some-element-or-other>
       <title>Some title</title>
       <updated>20160213</updated>
@@ -34,7 +34,7 @@ class TestWorksheet < Test::Unit::TestCase
   end
 
   def cells_feed
-    @cells_feed ||= Nokogiri.XML(File.open(File.expand_path('./fixtures/worksheet_cells_feed.xml')))
+    @cells_feed ||= Ox.parse(File.open(File.expand_path('./fixtures/worksheet_cells_feed.xml')))
   end
 
   def mocked_session

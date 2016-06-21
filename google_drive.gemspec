@@ -13,7 +13,8 @@ Gem::Specification.new do |s|
   s.files = ['README.md'] + Dir['lib/**/*']
   s.require_paths = ['lib']
 
-  s.add_dependency('nokogiri', ['>= 1.5.3', '< 2.0.0'])
+  #  s.add_dependency('nokogiri', ['>= 1.5.3', '< 2.0.0'])
+  s.add_dependency('ox', ['>= 2.4.0', '< 3.0.0'])
   s.add_dependency('oauth', ['>= 0.3.6', '< 1.0.0'])
   s.add_dependency('oauth2', ['>= 0.5.0', '< 2.0.0'])
   s.add_dependency('google-api-client', ['>= 0.9.0', '< 1.0.0'])

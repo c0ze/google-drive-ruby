@@ -27,7 +27,7 @@ module GoogleDrive
       @list = nil
     end
 
-    # Nokogiri::XML::Element object of the <entry> element in a worksheets feed.
+    # Ox::XML::Element object of the <entry> element in a worksheets feed.
     attr_reader(:worksheet_feed_entry)
 
     # Title of the worksheet (shown as tab label in Web interface).
